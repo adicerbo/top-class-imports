@@ -21,9 +21,9 @@ carRouter.get("/new", (req, res) => {
 carRouter.delete("/:id", (req, res) => {
     Car.findByIdAndDelete(
         req.params.id,
-        (error, data) =>{
+        (error, data) => {
             res.redirect("/")
-    })
+        })
 })
 
 // update
@@ -48,7 +48,15 @@ carRouter.post("/", (req, res) => {
 
 
 // edit
-
+carRouter.get("/:id/edit", (req, res) => {
+    Car.findById(
+        req.params.id,
+        (error, foundCar) => {
+            res.render("edit.ejs", {
+                car: foundCar
+            });
+        });
+});
 
 // show
 carRouter.get("/:id", (req, res) => {
