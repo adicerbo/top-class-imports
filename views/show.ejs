@@ -7,6 +7,25 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="/">Back to Home</a>
     <h1><%=car.name %></h1>
+    <img id="primary" src="<%=car.image %>"><br />
+    Make: <%=car.make %><br />
+    Year: <%=car.year %><br />
+    Kilometers: <%=car.kilometers %><br />
+    Price: <%=car.price %><br />
+    <a href=": <%=car.link %>"><button>Listing Here</button></a><br />
+    <form action="/<%=car._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-danger btn-sm" type="submit">DELETE</button>
+    </form>
+    <button class="btn-outline-secondary" type="submit">
+        <a href="/<%=car._id %>/edit">Edit</a>
+    </button>
 </body>
+<style>
+    #primary {
+       width: 500px;
+       height: auto; 
+    }
+</style>
 </html>

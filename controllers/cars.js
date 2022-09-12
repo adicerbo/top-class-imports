@@ -12,7 +12,9 @@ carRouter.get("/", (req, res) => {
     });
 });
 // new
-
+carRouter.get("/new", (req, res) => {
+    res.render("new.ejs");
+});
 // delete
 
 // update
@@ -25,6 +27,7 @@ carRouter.post("/", (req, res) => {
         res.send(createdCar);
     })
 });
+
 
 // edit
 
