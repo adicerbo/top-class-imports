@@ -1,13 +1,12 @@
 // dependencies
-const { application } = require("express");
 const express = require("express");
 const carRouter = express.Router();
 const Car = require("../models/cars.js")
 
 // index
-// carRouter.get("/", (req, res) => {
-//     res.render("index.ejs")
-// })
+carRouter.get("/", (req, res) => {
+    res.render("index.ejs")
+})
 // new
 
 // delete
@@ -15,9 +14,14 @@ const Car = require("../models/cars.js")
 // update
 
 // create
-// carRouter.post("/", (req, res) => {
-//     res.send("received");
-// });
+
+// create
+carRouter.post("/", (req, res) => {
+    Car.create(req.body, (error, createdCar) => {
+        res.send(createdCar);
+    })
+});
+
 // edit
 
 // show
