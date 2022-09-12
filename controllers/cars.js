@@ -5,8 +5,12 @@ const Car = require("../models/cars.js")
 
 // index
 carRouter.get("/", (req, res) => {
-    res.render("index.ejs")
-})
+    Car.find({}, (error, allCars) => {
+         res.render("index.ejs", {
+            cars: allCars,
+         });
+    });
+});
 // new
 
 // delete

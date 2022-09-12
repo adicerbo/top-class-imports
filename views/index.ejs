@@ -8,5 +8,15 @@
 </head>
 <body>
     <h1>Home</h1>
+    <ul>
+        <%cars.forEach(car=> { %>
+        <li>
+            <img src="<%=car.image %>"><br />
+            <a href="/car/<%=car._id %>">
+                <%=car.name%>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
 </body>
 </html>
