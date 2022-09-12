@@ -6,9 +6,9 @@ const Car = require("../models/cars.js")
 // index
 carRouter.get("/", (req, res) => {
     Car.find({}, (error, allCars) => {
-         res.render("index.ejs", {
+        res.render("index.ejs", {
             cars: allCars,
-         });
+        });
     });
 });
 // new
@@ -18,13 +18,22 @@ carRouter.get("/new", (req, res) => {
 // delete
 
 // update
-
+carRouter.put("/:id", (req, res) => {
+    Car.findByIdAndUpdate(
+        req.params.id,
+        req.body, {
+        new: true
+    },
+        (error, updatedCar) => {
+            res.redirect(`/cars/${req.params.id}`);
+        });
+});
 // create
 
 // create
 carRouter.post("/", (req, res) => {
     Car.create(req.body, (error, createdCar) => {
-        res.send(createdCar);
+        res.redirect("/");
     })
 });
 

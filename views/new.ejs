@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Add a New Car</h1>
+    <form action="/cars" method="POST">
+        <input type="text" name="name" 
+        placeholder="Model & Trim ex. Skyline GTR V-Spec II "><br />
+        <input type="text" name="make" placeholder="Make ex. Nissan"><br />
+        <input type="number" name="year" placeholder="Year"><br />
+        <input type="number" name="kilometers" placeholder="Kilometers"><br />
+        <input type="number" name="price" placeholder="Price (In USD)"><br />
+        <input type="text" name="image" placeholder="Image Link"><br />
+        <input type="text" name="link" placeholder="Link to Buy"><br />
+        <button class="btn btn-primary" type="submit">Add Car</button>
+    </form>
 </body>
 </html>
