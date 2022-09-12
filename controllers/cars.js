@@ -29,7 +29,13 @@ carRouter.post("/", (req, res) => {
 // edit
 
 // show
-
+carRouter.get("/:id", (req, res) => {
+    Car.findById(req.params.id, (err, foundCar) => {
+        res.render("show.ejs", {
+            car: foundCar,
+        });
+    });
+});
 
 
 // exports
