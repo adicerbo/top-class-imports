@@ -11,16 +11,22 @@
     <ul>
         <%cars.forEach(car=> { %>
         <li>
-            <a href="/car/<%=car._id %>">
+            <a href="/<%=car._id %>">
                 <img id="primary" 
                 src="<%=car.image %>">
             </a>
             <br />
-            <a href="/car/<%=car._id %>">
+            <a href="/<%=car._id %>">
                 <%=car.name%>
             </a>
         </li>
         <% }) %>
     </ul>
 </body>
+<style>
+    #primary {
+        width: 200px;
+        height: auto;
+    }
+</style>
 </html>
