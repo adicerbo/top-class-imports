@@ -11,11 +11,20 @@ carRouter.get("/", (req, res) => {
         });
     });
 });
+
 // new
 carRouter.get("/new", (req, res) => {
     res.render("new.ejs");
 });
+
 // delete
+carRouter.delete("/:id", (req, res) => {
+    Car.findByIdAndDelete(
+        req.params.id,
+        (error, data) =>{
+            res.redirect("/")
+    })
+})
 
 // update
 carRouter.put("/:id", (req, res) => {
@@ -28,7 +37,7 @@ carRouter.put("/:id", (req, res) => {
             res.redirect(`/cars/${req.params.id}`);
         });
 });
-// create
+
 
 // create
 carRouter.post("/", (req, res) => {
@@ -39,6 +48,7 @@ carRouter.post("/", (req, res) => {
 
 
 // edit
+
 
 // show
 carRouter.get("/:id", (req, res) => {
