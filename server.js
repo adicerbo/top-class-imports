@@ -18,6 +18,12 @@ db.on('connected', () => console.log('mongo connected'));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 // middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
+
+// controllers
+const carController = require("./controllers/cars.js")
+app.use("/cars", carController);
 
 // listener
 const PORT = process.env.PORT;
