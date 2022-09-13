@@ -12,7 +12,7 @@
     Year: <%=car.year %><br />
     Kilometers: <%=car.kilometers %><br />
     Price: <%=car.price %><br />
-    <a href=": <%=car.link %>"><button>Listing Here</button></a><br />
+    <button class="btn btn-primary"><a href="<%=car.link %>" target="_blank">Listing Here</button></a><br />
     <form action="/<%=car._id %>?_method=DELETE" method="POST">
         <button class="btn btn-danger btn-sm" type="submit">DELETE</button>
     </form>
@@ -25,5 +25,12 @@
        width: 500px;
        height: auto; 
     }
+
+    a, a:hover, a:focus 
+        {
+            color: inherit;
+            text-decoration: none;
+        }
 </style>
+<%- include("./partials/style.ejs")%>
 </html>
