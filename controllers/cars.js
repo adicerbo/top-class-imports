@@ -12,6 +12,7 @@ carRouter.get("/", (req, res) => {
     });
 });
 
+
 // new
 carRouter.get("/new", (req, res) => {
     res.render("new.ejs");

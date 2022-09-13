@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <%-include("./partials/head.ejs") %>
-<body>
-    <nav>
-        <a href="/new">Add a New Car</a>
-    </nav>
-    <h1>Home</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
-    <ul>
-        <%cars.forEach(car=> { %>
-        <li>
-            <a href="/<%=car._id %>">
-                <img id="primary" 
-                src="<%=car.image %>">
-            </a>
-            <br />
-            <a href="/<%=car._id %>">
-                <%=car.name%>
-            </a>
-        </li>
-        <% }) %>
-    </ul>
-</body>
-<style>
-    #primary {
-        width: 200px;
-        height: auto;
-    }
-    ul {
-        list-style: none;
-    }
-</style>
+    <body>
+        <nav>
+            <a href="/new">Add a New Car</a>
+        </nav>
+        <div class="container">
+            <h1>Home</h1>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+<div class="container">
+    <form>
+        <label for="make">Choose a Make</label>
+        <select name="make" id="make">
+            <option value="Nissan">Nissan</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Eunos">Eunos</option>
+            <option value="Honda">Honda</option>
+            <option value="Suzuki">Suzuki</option>
+        </select>
+    </form>
+</div>    
+    <br />
+    <div class="container">
+        <div class="row">
+            <%cars.forEach(car=> { %>
+                <div class="col-lg">
+                    <a href="/<%=car._id %>">
+                        <img id="primary" src="<%=car.image %>">
+                    </a>
+                    <br />
+                    <div class="container">
+                        <a href="/<%=car._id %>">
+                            <%=car.name%>
+                        </a>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    </body>
+    <style>
+        #primary {
+            width: 300px;
+            height: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a, a:hover, a:focus 
+        {
+            color: inherit;
+        }
+    </style>
+
 </html>
