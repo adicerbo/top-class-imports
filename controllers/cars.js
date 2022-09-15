@@ -12,11 +12,22 @@ carRouter.get("/", (req, res) => {
     });
 });
 
+// carRouter.get("/:make", (req, res) => {
+//     Car.Find({}, (error, someCars) => {
+//         res.render("make.ejs", {
+//             specCars: someCars,
+//         });
+//     });
+// });
+
+
+
 
 // new
 carRouter.get("/new", (req, res) => {
     res.render("new.ejs");
 });
+
 
 // delete
 carRouter.delete("/:id", (req, res) => {
@@ -47,6 +58,25 @@ carRouter.post("/", (req, res) => {
     })
 });
 
+// search feature
+// carRouter.post("/", (req, res) => {
+//     console.log("Hi")
+//     if(req.query.search) {
+//         const regex = new RegExp(escapeRegex(req.query.search), "gi");
+//         Car.find({"make": regex}, (error, foundCars) => {
+//             if(error) {
+//                 console.log(error)
+//             } else{
+//                 res.render("make.ejs", {
+//                     cars: foundCars
+//                 });
+//             }
+//         });
+//     }
+// });
+
+
+
 
 // edit
 carRouter.get("/:id/edit", (req, res) => {
@@ -68,6 +98,11 @@ carRouter.get("/:id", (req, res) => {
     });
 });
 
+
+// regex function for fuzzy search
+// function escapeRegex(text) {
+//     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+// };
 
 // exports
 module.exports = carRouter;
