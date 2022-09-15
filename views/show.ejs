@@ -10,35 +10,20 @@
         <h1><%=car?.name %></h1>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <div class="container">
-    <img id="primary" src="<%=car?.image %>"><br />
-    Make: <%=car?.make %><br />
-    Year: <%=car?.year %><br />
-    Kilometers: <%=car?.kilometers %><br />
-    Price: <%=car?.price %><br />
-    <button class="btn btn-primary"><a href="<%=car?.link %>" target="_blank">Listing Here</button></a><br />
-    <form action="/<%=car?._id %>?_method=DELETE" method="POST">
-        <button class="btn btn-danger btn-sm" type="submit">DELETE</button>
-    </form>
-    <button class=" btn btn-secondary" type="submit">
-        <a href="/<%=car?._id %>/edit">Edit</a>
-    </button>
+    <div class="container" id="show">
+        <img class="primary" src="<%=car?.image %>"><br />
+         Make: <%=car?.make %><br />
+        Year: <%=car?.year %><br />
+        Kilometers: <%=car?.kilometers %><br />
+        Price: <%=car?.price %><br />
+        <button class="btn btn-primary"><a href="<%=car?.link %>" target="_blank">Listing Here</button></a><br />
+            
+        <form action="/<%=car?._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger btn-sm" type="submit">DELETE</button>
+        </form>
+        <button class=" btn btn-secondary" type="submit">
+            <a href="/<%=car?._id %>/edit">Edit</a>
+        </button>
     </div>
 </body>
-<style>
-    #primary {
-       width: 600px;
-       height: auto; 
-    }
-
-    a, a:hover, a:focus 
-        {
-            color: inherit;
-            text-decoration: none;
-        }
-        button {
-        margin: 5px;
-    }
-</style>
-<%- include("./partials/style.ejs")%>
 </html>

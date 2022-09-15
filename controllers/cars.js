@@ -75,6 +75,26 @@ carRouter.post("/", (req, res) => {
 //     }
 // });
 
+// carRouter.get("/:make", (req, res) => {
+//     let search_key = req.params.select;
+//     Car.find({make: search_key})
+//         .then(cars => res.send(allCars))
+//         .catch(err => res.status(404).json({success: false}));
+// });
+
+
+
+// carRouter.get("/:make", (req, res) => {
+//   Car.find({make: "Nissan"}, (error, data) => {
+//     if(error){
+//         console.log(error)
+//     } else {
+//         res.send(data)
+//         };
+//     });  
+// })
+
+
 
 
 

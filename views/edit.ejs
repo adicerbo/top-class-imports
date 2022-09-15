@@ -12,30 +12,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 <div class="container">
     <form action="/cars/<%=car._id%>?_method=PUT" method="POST">
-        <div class="form-group">
-            <input type="text" name="name" value="<%=car.name %>"><br />
-             </div>
-            <input type="text" name="make" value="<%=car.make %>"><br />
-            <input type="number" name="year" value="<%=car.year %>"><br />
-            <input type="number" name="kilometers" value="<%=car.kilometers %>"><br />
-            <input type="number" name="price" value="<%=car.price %>"><br />
-            <input type="text" name="image" value="<%=car.image %>"><br />
-            <input type="text" name="link" value="<%=car.link %>"><br />
-            <button class="btn btn-primary" type="submit">Submit Changes</button>
-       
-    </form>
-</div>
-</body>
-<style>
-     a, a:hover, a:focus 
-        {
-            color: inherit;
-            text-decoration: none;
-        }
-    input {
-        margin: 5px;
-        width: 90%;
-    }
-</style>
-<%- include("./partials/style.ejs")%>
+                <div class="form-group">
+                    <input class="edit" type="text" name="name" value="<%=car.name %>"><br />
+                </div>
+                <input class="edit" type="text" name="make" value="<%=car.make %>"><br />
+                <input class="edit" type="number" name="year" value="<%=car.year %>"><br />
+                <input class="edit" type="number" name="kilometers" value="<%=car.kilometers %>"><br />
+                <input class="edit" type="number" name="price" value="<%=car.price %>"><br />
+                <input class="edit" type="text" name="image" value="<%=car.image %>"><br />
+                <input class="edit" type="text" name="link" value="<%=car.link %>"><br />
+                <button class="btn btn-primary" type="submit">Submit Changes</button>
+            </form>
+        </div>
+    </body>
 </html>

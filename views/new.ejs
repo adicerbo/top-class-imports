@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include("./partials/head.ejs") %>
+<%-include("./partials/head.ejs") %>
 
-<body>
-    <div class="container">
-        <h1>Add a New Car</h1>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <div class="container">
-        <form action="/cars" method="POST">
-            <input type="text" name="name" 
-            placeholder="Model & Trim ex. Skyline GTR V-Spec II "><br />
-            <input type="text" name="make" placeholder="Make ex. Nissan"><br />
-            <input type="number" name="year" placeholder="Year"><br />
-            <input type="number" name="kilometers" placeholder="Kilometers"><br />
-            <input type="number" name="price" placeholder="Price (In USD)"><br />
-            <input type="text" name="image" placeholder="Image Link"><br />
-            <input type="text" name="link" placeholder="Link to Buy"><br />
-            <button class="btn btn-primary" type="submit">Add Car</button>
-        </form>
-    </div>
-</body>
-<style>
-    input {
-        margin: 5px;
-        width: 90%;
-    }
-</style>
-<%- include("./partials/style.ejs")%>
+    <body>
+        <div class="container">
+            <h1>Add a New Car</h1>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+        <div class="container">
+            <form class="new" action="/cars" method="POST">
+                <input class="new" type="text" name="name" placeholder="Model & Trim ex. Skyline GTR V-Spec II "><br />
+                <input class="new" type="text" name="make" placeholder="Make ex. Nissan"><br />
+                <input class="new" type="number" name="year" placeholder="Year"><br />
+                <input class="new" type="number" name="kilometers" placeholder="Kilometers"><br />
+                <input class="new" type="number" name="price" placeholder="Price (In USD)"><br />
+                <input class="new" type="text" name="image" placeholder="Image Link"><br />
+                <input class="new" type="text" name="link" placeholder="Link to Buy"><br />
+                <button class="btn btn-primary" type="submit">Add Car</button>
+            </form>
+        </div>
+    </body>
+
 </html>
