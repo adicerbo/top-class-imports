@@ -7,7 +7,7 @@ const app = express();
 const db = mongoose.connection;
 const carController = require("./controllers/cars.js")
 
-const PORT = process.env.PORT || 3000;
+
 
 // connect to database via heroku/locally
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -35,4 +35,4 @@ app.use("/cars", carController);
 const Car = require("./models/cars.js");
 
 // listener
-app.listen(PORT, () => console.log(`server is listening on port`, PORT))
+app.listen(process.env.PORT, () => console.log(`server is listening on port`, PORT))
