@@ -12,6 +12,7 @@ A craiglist-like app that allows users to see listings of import-eligible vehicl
 - Mongoose
 - Postman
 - EJS
+- JavaScript
 
 ## Screenshots
 ![top-class-index](https://user-images.githubusercontent.com/110944138/190488956-665ab58d-81dd-440f-a240-4fce48655f25.PNG)
