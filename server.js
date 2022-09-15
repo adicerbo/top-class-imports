@@ -35,4 +35,4 @@ app.use("/cars", carController);
 const Car = require("./models/cars.js");
 
 // listener
-app.listen(process.env.PORT, () => console.log(`server is listening on port`, PORT))
+app.listen(process.env.PORT, () => console.log(`server is listening on port`, process.env.PORT))
