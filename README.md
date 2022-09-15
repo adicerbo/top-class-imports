@@ -18,3 +18,14 @@ A craiglist-like app that allows users to see listings of import-eligible vehicl
 ![top-class-show](https://user-images.githubusercontent.com/110944138/190488974-18755eb7-71c0-44eb-9129-856f860b2c36.PNG)
 ![top-class-edit](https://user-images.githubusercontent.com/110944138/190488984-15f840f2-0895-4e6c-b8d9-dd82d98bfba0.PNG)
 ![top-class-new](https://user-images.githubusercontent.com/110944138/190488990-f8080bd3-19d0-4392-beba-217469e7ab7e.PNG)
+
+## Getting Started
+click here
+
+## Future Enhancements
+- Make filter by make select bar function accurately
+- Add new models for engines, transmissions, body panels, interior pieces, and other items exclusively made in Japan for these cars
+- Add option for adding multiple images that can be cycled through on the show pages for each car
+
+## Repository
+View the GitHub repository or this project [] here!
