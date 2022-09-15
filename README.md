@@ -28,4 +28,4 @@ click here
 - Add option for adding multiple images that can be cycled through on the show pages for each car
 
 ## Repository
-View the GitHub repository or this project [] here!
+View the GitHub repository or this project [here](https://github.com/adicerbo/top-class-imports)!
