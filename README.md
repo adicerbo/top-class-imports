@@ -21,7 +21,7 @@ A craiglist-like app that allows users to see listings of import-eligible vehicl
 ![top-class-new](https://user-images.githubusercontent.com/110944138/190488990-f8080bd3-19d0-4392-beba-217469e7ab7e.PNG)
 
 ## Getting Started
-click here
+Click [here](https://top-class-imports.herokuapp.com/) to see the app in action!
 
 ## Future Enhancements
 - Make filter by make select bar function accurately
