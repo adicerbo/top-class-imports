@@ -2,7 +2,7 @@
 ![top-class-index](https://user-images.githubusercontent.com/110944138/190487775-47566e6a-46ab-4ea0-ba20-578960e2d035.PNG)
 
 ## Description
-A craiglist-like app that allows users to see listings of import-eligible vehicles from Japan. Users are able to see a car they may be interested in and either be taken to the page where it's listed for sale, edit the listing if something seems off, or delete the listing altogether.
+A craigslist-like app that allows users to see listings of import-eligible vehicles from Japan. Users are able to see a car they may be interested in and either be taken to the page where it's listed for sale, edit the listing if something seems off, or delete the listing altogether.
 
 ## Technologies Used
 - HTML5
@@ -21,7 +21,7 @@ A craiglist-like app that allows users to see listings of import-eligible vehicl
 ![top-class-new](https://user-images.githubusercontent.com/110944138/190488990-f8080bd3-19d0-4392-beba-217469e7ab7e.PNG)
 
 ## Getting Started
-click here
+Click [here](https://top-class-imports.herokuapp.com/) to see the app in action!
 
 ## Future Enhancements
 - Make filter by make select bar function accurately
