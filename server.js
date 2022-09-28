@@ -31,7 +31,6 @@ app.use(express.static('public'))
 app.use("/", carController);
 
 // controllers
-app.use("/cars", carController);
 const Car = require("./models/cars.js");
 
 // listener
