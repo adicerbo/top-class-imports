@@ -46,7 +46,7 @@ carRouter.put("/:id", (req, res) => {
         new: true
     },
         (error, updatedCar) => {
-            res.redirect(`/cars/${req.params.id}`);
+            res.redirect(`/${req.params.id}`);
         });
 });
 
