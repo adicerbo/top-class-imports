@@ -34,4 +34,4 @@ app.use("/", carController);
 const Car = require("./models/cars.js");
 
 // listener
-app.listen(process.env.PORT, () => console.log(`server is listening on port`, process.env.PORT))
+module.exports = app.listen(process.env.PORT, () => console.log(`server is listening on port`, process.env.PORT))

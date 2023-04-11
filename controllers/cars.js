@@ -12,6 +12,18 @@ carRouter.get("/", (req, res) => {
     });
 });
 
+carRouter.get("/cars", (req, res) => {
+    Car.find({}, (error, allCars) => {
+        res.send(allCars)
+    });
+});
+
+carRouter.get("/cars/:id", (req, res) => {
+    Car.findById(req.params.id, (err, foundCar) => {
+        res.send(foundCar)
+    });
+});
+
 // carRouter.get("/:make", (req, res) => {
 //     Car.Find({}, (error, someCars) => {
 //         res.render("make.ejs", {

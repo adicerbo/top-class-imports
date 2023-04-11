@@ -4,7 +4,7 @@
   "description": "![top-class-index](https://user-images.githubusercontent.com/110944138/190487775-47566e6a-46ab-4ea0-ba20-578960e2d035.PNG)",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node server.js",
     "server": "nodemon server.js"
   },
@@ -28,5 +28,9 @@
     "mongoose": "^6.6.0",
     "nodemon": "^2.0.20"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.1.0"
+  }
 }
