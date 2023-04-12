@@ -18,7 +18,7 @@ carRouter.get("/cars", (req, res) => {
     });
 });
 
-carRouter.get("/cars/:id", (req, res) => {
+carRouter.get("cars/:id", (req, res) => {
     Car.findById(req.params.id, (err, foundCar) => {
         res.send(foundCar)
     });
@@ -124,9 +124,11 @@ carRouter.get("/:id/edit", (req, res) => {
 // show
 carRouter.get("/:id", (req, res) => {
     Car.findById(req.params.id, (err, foundCar) => {
-        res.render("show.ejs", {
-            car: foundCar,
-        });
+        if (foundCar === null || foundCar === undefined) {
+            res.status(404).send("Click on a real car, weirdo...");
+        } else {
+            res.render("show.ejs", { car: foundCar });
+        }
     });
 });
 
